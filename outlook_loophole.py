@@ -3,8 +3,8 @@ import re
 from email.mime.text import MIMEText
 from email.header    import Header
 from datetime import date
-userid = 'unknown@cisco.com'
-passid = "anypassword"
+userid = 'unknown@cisco.com' #any userid u can give
+passid = "anypassword" #any password u can give
 today = str(date.today())
 #below is used to import file information
 '''status = open('Todays_Status.txt','r')
@@ -18,9 +18,9 @@ today_status = "\nhello how r u\n"
 Salutation = 'Hi,\n'
 greeting = '\nRegards,\nDevil.'
 today_status = Salutation + today_status + greeting
-receivers = ['vidoddip@cisco.com']
+receivers = ['vidoddip@cisco.com','do20015007@wipro.com'] #any valid userid uses outlook mail.
 message = MIMEText(today_status,'plain','utf-8')
-message['subject'] = Header('Chapter Close','utf-8')
+message['subject'] = Header('U want any help?','utf-8')
 message['from'] = userid
 message['to'] = ', '.join(receivers)
 smtpObj = smtplib.SMTP('mail.cisco.com')
